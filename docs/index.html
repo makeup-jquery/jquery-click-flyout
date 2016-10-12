@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Demo: jquery-click-flyout</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <style>
+            .flyout {
+                position: relative;
+            }
+            .flyout__overlay {
+                background-color: LightYellow;
+                border: 1px solid #eee;
+                display: none;
+                left: 0;
+                padding: 1rem;
+                position: absolute;
+                width: 300px;
+                z-index: 1;
+            }
+            .flyout__trigger[aria-expanded=true] ~ .flyout__live-region > .flyout__overlay {
+                display: block;
+            }
+            button.flyout__trigger,
+            a.flyout__trigger[role=button],
+            .stealth {
+                background: #eee;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                color: inherit;
+                font-size: small;
+                padding: 1px 5px;
+                text-decoration: none;
+            }
+            .stealth {
+                border: 0;
+                clip: rect(1px, 1px, 1px, 1px);
+                height: 1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                white-space: nowrap;
+                width: 1px;
+            }
+            .stealth:focus {
+                clip: auto;
+                height: auto;
+                padding: inherit;
+                width: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div role="main">
+            <h1>Demo: jquery-click-flyout</h1>
+            <p>Activate a button to trigger flyout. Link has a stealth button.</p>
+            <span class="flyout">
+                <button class="flyout__trigger">Button</button>
+                <span class="flyout__live-region" aria-live="off">
+                    <div class="flyout__overlay">
+                        <p>Any kind of HTML control can go inside of a flyout...</p>
+                        <p>A link: <a id="foo" href="http://www.ebay.com">www.ebay.com</a></p>
+                        <p>A button: <button>Click Me</button></p>
+                        <p>An input: <input type="text" aria-label="Dummy textbox"></p>
+                        <p>A checkbox: <input type="checkbox" aria-label="Dummy checkbox"></p>
+                    </div>
+                </span>
+            </span>
+            <span class="flyout">
+                <a role="button" class="flyout__trigger" href="http://www.ebay.com">ARIA Button</a>
+                <span class="flyout__live-region" aria-live="off">
+                    <div class="flyout__overlay">
+                        <p>Any kind of HTML control can go inside of a flyout...</p>
+                        <p>A link: <a href="http://www.ebay.com">www.ebay.com</a></p>
+                        <p>A button: <button>Click Me</button></p>
+                        <p>An input: <input type="text" aria-label="Dummy textbox"></p>
+                        <p>A checkbox: <input type="checkbox" aria-label="Dummy checkbox"></p>
+                    </div>
+                </span>
+            </span>
+        </div>
+        <script src="browser.js"></script>
+        <script>
+            $(function() {
+                $('.flyout').clickFlyout();
+            });
+        </script>
+    </body>
+</html>
