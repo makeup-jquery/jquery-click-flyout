@@ -23,7 +23,6 @@ lint.txt
 jsdoc
 
 # Lasso
-
 .cache
 build
 docs/browser.js.*
