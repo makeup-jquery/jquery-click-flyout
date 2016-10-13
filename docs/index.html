@@ -21,7 +21,6 @@
                 display: block;
             }
             button.flyout__trigger,
-            a.flyout__trigger[role=button],
             .stealth {
                 background: #eee;
                 border: 1px solid #ccc;
@@ -59,18 +58,6 @@
                     <div class="flyout__overlay">
                         <p>Any kind of HTML control can go inside of a flyout...</p>
                         <p>A link: <a id="foo" href="http://www.ebay.com">www.ebay.com</a></p>
-                        <p>A button: <button>Click Me</button></p>
-                        <p>An input: <input type="text" aria-label="Dummy textbox"></p>
-                        <p>A checkbox: <input type="checkbox" aria-label="Dummy checkbox"></p>
-                    </div>
-                </span>
-            </span>
-            <span class="flyout">
-                <a role="button" class="flyout__trigger" href="http://www.ebay.com">ARIA Button</a>
-                <span class="flyout__live-region" aria-live="off">
-                    <div class="flyout__overlay">
-                        <p>Any kind of HTML control can go inside of a flyout...</p>
-                        <p>A link: <a href="http://www.ebay.com">www.ebay.com</a></p>
                         <p>A button: <button>Click Me</button></p>
                         <p>An input: <input type="text" aria-label="Dummy textbox"></p>
                         <p>A checkbox: <input type="checkbox" aria-label="Dummy checkbox"></p>

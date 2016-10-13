@@ -1,6 +1,6 @@
 /**
 * @file jQuery plugin that creates the basic interactivity for a flyout that opens on click of trigger element
-* @version 0.0.1
+* @version 0.0.2
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
 * @requires jquery-next-id
 * @requires jquery-focusable
@@ -34,7 +34,6 @@
             var $widget = $(this);
             var $trigger = $widget.find(options.triggerSelector).first();
             var $overlay = $widget.find(options.overlaySelector).first();
-            var isFauxButton = $trigger.prop('tagName').toLowerCase() === 'a' && $trigger.attr('role') === 'button';
 
             var isExpanded = function() {
                 return $trigger.attr('aria-expanded') === 'true';
@@ -101,22 +100,8 @@
                 var _void = isExpanded() ? collapseFlyout() : expandFlyout();
             };
 
-            // handler for keydown event on faux button
-            var onFauxButtonKeyDown = function(e) {
-                // spacebar behaviour
-                if (e.keyCode === 32) {
-                    // prevent page scroll
-                    e.preventDefault();
-                    toggleFlyout();
-                }
-            };
-
             // handler for click event on trigger
             var onTriggerClick = function(e) {
-                if (isFauxButton === true) {
-                    // prevent link behaviour
-                    e.preventDefault();
-                }
                 toggleFlyout();
             };
 
@@ -134,11 +119,6 @@
             // listen for click events on trigger
             $trigger.on('click', onTriggerClick);
 
-            // if the button is a faux button then add keydown listener
-            if (isFauxButton === true) {
-                $trigger.on('keydown', onFauxButtonKeyDown);
-            }
-
             // listen for focus exit if autoCollapse is true
             if (options.autoCollapse === true) {
                 $widget.focusExit().on('focusExit', onWidgetFocusExit);
@@ -148,6 +128,9 @@
             $overlay
                 .prop('id', $widget.prop('id') + '-overlay')
                 .attr('aria-hidden', 'true');
+
+            // add class to signify that js is available
+            $widget.addClass('flyout--js');
         });
     };
 }(jQuery, window, document));
