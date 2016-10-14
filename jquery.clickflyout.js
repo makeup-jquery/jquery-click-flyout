@@ -1,6 +1,6 @@
 /**
 * @file jQuery plugin that creates the basic interactivity for a flyout that opens on click of trigger element
-* @version 0.0.2
+* @version 0.0.3
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
 * @requires jquery-next-id
 * @requires jquery-focusable
@@ -105,9 +105,6 @@
                 toggleFlyout();
             };
 
-            // handler for focusExit event on widget
-            var onWidgetFocusExit = collapseFlyout;
-
             // assign next id in sequence if one doesn't already exist
             $widget.nextId('flyout');
 
@@ -121,7 +118,8 @@
 
             // listen for focus exit if autoCollapse is true
             if (options.autoCollapse === true) {
-                $widget.focusExit().on('focusExit', onWidgetFocusExit);
+                $widget.focusExit().on('focusExit', collapseFlyout);
+                $trigger.on('focus', collapseFlyout);
             }
 
             // assign id to overlay and hide element
