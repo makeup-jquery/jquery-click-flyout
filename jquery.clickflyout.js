@@ -1,6 +1,6 @@
 /**
 * @file jQuery plugin that creates the basic interactivity for a flyout that opens on click of trigger element
-* @version 0.0.3
+* @version 0.0.4
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
 * @requires jquery-next-id
 * @requires jquery-focusable
@@ -108,6 +108,14 @@
             // assign next id in sequence if one doesn't already exist
             $widget.nextId('flyout');
 
+            // ensure overlay has an ID
+            if ($overlay.prop('id') === '') {
+                $overlay.prop('id', $widget.prop('id') + '-overlay');
+            }
+
+            // initial state is hidden from assistive technology
+            $overlay.attr('aria-hidden', 'true');
+
             // the button controls the overlay's expanded state
             $trigger
                 .attr('aria-controls', $overlay.prop('id'))
@@ -121,11 +129,6 @@
                 $widget.focusExit().on('focusExit', collapseFlyout);
                 $trigger.on('focus', collapseFlyout);
             }
-
-            // assign id to overlay and hide element
-            $overlay
-                .prop('id', $widget.prop('id') + '-overlay')
-                .attr('aria-hidden', 'true');
 
             // add class to signify that js is available
             $widget.addClass('flyout--js');
