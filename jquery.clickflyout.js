@@ -1,6 +1,6 @@
 /**
 * @file jQuery plugin that creates the basic interactivity for a flyout that opens on click of trigger element
-* @version 0.0.5
+* @version 0.0.6
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
 * @requires jquery-next-id
 * @requires jquery-focusable
@@ -24,6 +24,7 @@
     $.fn.clickFlyout = function clickFlyout(options) {
         options = $.extend({
             autoCollapse: true,
+            closeOnEsc: false,
             debug: false,
             focusManagement: 'none',
             triggerSelector: '.flyout__trigger',
@@ -123,6 +124,15 @@
             if (options.autoCollapse === true) {
                 $widget.focusExit().on('focusExit', collapseFlyout);
                 $trigger.on('focus', collapseFlyout);
+            }
+
+            if (options.closeOnEsc === true) {
+                $widget.on('keydown', function(e) {
+                    if (e.keyCode === 27) {
+                        collapseFlyout();
+                        $trigger.focus();
+                    }
+                });
             }
 
             // add class to signify that js is available

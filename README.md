@@ -73,6 +73,7 @@ Markup after plugin:
 ## Options
 
 * `autoCollapse` - auto collapse flyout when focus leaves the widget (default: true)
+* `closeOnEsc` - collapse the flyout when ESCAPE key is pressed (default: false)
 * `debug` - print debug statements to console (defualt: false)
 * `focusManagement` - set focus to 'none, 'overlay', 'first' or an ID (default: 'none')
 * `overlaySelector` - selector for overlay element (default: '.flyout__overlay')
