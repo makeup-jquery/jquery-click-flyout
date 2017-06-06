@@ -35,17 +35,18 @@
     "url": "https://github.com/ianmcburnie/jquery-click-flyout.git"
   },
   "license": "ISC",
+  "dependencies": {
+    "jquery": ">=1.11",
+    "jquery-focus-exit": "~0.3",
+    "jquery-focusable": "~0.3",
+    "jquery-next-id": "~0.1"
+  },
   "devDependencies": {
     "browser-sync": "^2",
     "coveralls": "^2",
     "eslint": "^3",
-    "eslint-config-google": "~0.6",
+    "eslint-config-google": "~0.8",
     "jasmine-core": "^2",
-    "jquery": ">=1.11",
-    "jquery-next-id": "~0.1",
-    "jquery-focus-exit": "~0.3",
-    "jquery-focusable": "~0.3",
-    "jquery-migrate": "^3",
     "jsdoc": "^3",
     "jsmin": "^1",
     "karma": "^1",
@@ -63,9 +64,9 @@
   },
   "peerDependencies": {
     "jquery": ">=1.11",
-    "jquery-next-id": "~0.1",
     "jquery-focus-exit": "~0.3",
-    "jquery-focusable": "~0.3"
+    "jquery-focusable": "~0.3",
+    "jquery-next-id": "~0.1"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
