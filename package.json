@@ -35,12 +35,6 @@
     "url": "https://github.com/ianmcburnie/jquery-click-flyout.git"
   },
   "license": "ISC",
-  "dependencies": {
-    "jquery": ">=1.11",
-    "jquery-focus-exit": "~0.3",
-    "jquery-focusable": "~0.3",
-    "jquery-next-id": "~0.1"
-  },
   "devDependencies": {
     "browser-sync": "^2",
     "coveralls": "^2",
