@@ -1,10 +1,10 @@
 # jquery-click-flyout
 
 <p>
-    <a href="https://travis-ci.org/ianmcburnie/jquery-click-flyout"><img src="https://api.travis-ci.org/ianmcburnie/jquery-click-flyout.svg?branch=master" alt="Build Status" /></a>
-    <a href='https://coveralls.io/github/ianmcburnie/jquery-click-flyout?branch=master'><img src='https://coveralls.io/repos/ianmcburnie/jquery-click-flyout/badge.svg?branch=master&service=github' alt='Coverage Status' /></a>
-    <a href="https://david-dm.org/ianmcburnie/jquery-click-flyout"><img src="https://david-dm.org/ianmcburnie/jquery-click-flyout.svg" alt="Dependency status" /></a>
-    <a href="https://david-dm.org/ianmcburnie/jquery-click-flyout#info=devDependencies"><img src="https://david-dm.org/ianmcburnie/jquery-click-flyout/dev-status.svg" alt="devDependency status" /></a>
+    <a href="https://travis-ci.org/makeup-jquery/jquery-click-flyout"><img src="https://api.travis-ci.org/makeup-jquery/jquery-click-flyout.svg?branch=master" alt="Build Status" /></a>
+    <a href='https://coveralls.io/github/makeup-jquery/jquery-click-flyout?branch=master'><img src='https://coveralls.io/repos/makeup-jquery/jquery-click-flyout/badge.svg?branch=master&service=github' alt='Coverage Status' /></a>
+    <a href="https://david-dm.org/makeup-jquery/jquery-click-flyout"><img src="https://david-dm.org/makeup-jquery/jquery-click-flyout.svg" alt="Dependency status" /></a>
+    <a href="https://david-dm.org/makeup-jquery/jquery-click-flyout#info=devDependencies"><img src="https://david-dm.org/makeup-jquery/jquery-click-flyout/dev-status.svg" alt="devDependency status" /></a>
 </p>
 
 jQuery plugin that creates the basic interactivity for a button that expands and collapse a flyout.
@@ -105,8 +105,8 @@ Each test run will generate the following reports:
 
 ## CI Build
 
-https://travis-ci.org/ianmcburnie/jquery-click-flyout
+https://travis-ci.org/makeup-jquery/jquery-click-flyout
 
 ## Code Coverage
 
-https://coveralls.io/github/ianmcburnie/jquery-click-flyout?branch=master
+https://coveralls.io/github/makeup-jquery/jquery-click-flyout?branch=master

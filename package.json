@@ -19,10 +19,6 @@
   },
   "pre-commit": "prepublish",
   "author": "Ian McBurnie <ianmcburnie@hotmail.com>",
-  "homepage": "https://github.com/ianmcburnie/jquery-click-flyout",
-  "bugs": {
-    "url": "https://github.com/ianmcburnie/jquery-click-flyout/issues"
-  },
   "keywords": [
     "jquery-plugin",
     "ecosystem:jquery",
@@ -32,9 +28,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ianmcburnie/jquery-click-flyout.git"
+    "url": "https://github.com/makeup-jquery/jquery-click-flyout.git"
   },
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2",
     "coveralls": "^3",
@@ -42,9 +38,9 @@
     "eslint-config-ebay": "~0.1",
     "jasmine-core": "^2",
     "jquery": ">=1.11",
-    "jquery-focus-exit": "~0.3",
-    "jquery-focusable": "~0.3",
-    "jquery-next-id": "~0.1",
+    "jquery-focus-exit": "^1",
+    "jquery-focusable": "^1",
+    "jquery-next-id": "^1",
     "jsdoc": "^3",
     "jsmin": "^1",
     "karma": "^1",
@@ -62,9 +58,9 @@
   },
   "peerDependencies": {
     "jquery": ">=1.11",
-    "jquery-focus-exit": "~0.3",
-    "jquery-focusable": "~0.3",
-    "jquery-next-id": "~0.1"
+    "jquery-focus-exit": "^1",
+    "jquery-focusable": "^1",
+    "jquery-next-id": "^1"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"

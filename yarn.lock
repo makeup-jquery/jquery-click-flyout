@@ -2417,17 +2417,17 @@ jodid25519@^1.0.0:
   dependencies:
     jsbn "~0.1.0"
 
-jquery-focus-exit@~0.3:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/jquery-focus-exit/-/jquery-focus-exit-0.3.1.tgz#a17d04d1a2c90b56168714ce6794accaf357e7a1"
+jquery-focus-exit@^1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/jquery-focus-exit/-/jquery-focus-exit-1.0.1.tgz#76b5686bb464d07f9be45ef3888216305ced8046"
 
-jquery-focusable@~0.3:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/jquery-focusable/-/jquery-focusable-0.3.0.tgz#4932ed55fde18d74f08a06783a2f14782afcacd1"
+jquery-focusable@^1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/jquery-focusable/-/jquery-focusable-1.0.1.tgz#a8fe7062ccf01a0c1cf7818cfb2f41ac0dd55a79"
 
-jquery-next-id@~0.1:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/jquery-next-id/-/jquery-next-id-0.1.0.tgz#9a96b8ab2b8226454cdc69bcdfc3db87ceffa3c1"
+jquery-next-id@^1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/jquery-next-id/-/jquery-next-id-1.0.1.tgz#26541a06be9cb44186470716bc2ab7870cfd7936"
 
 jquery@>=1.11:
   version "3.2.1"
