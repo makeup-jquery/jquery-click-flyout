@@ -37,9 +37,9 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2",
-    "coveralls": "^2",
-    "eslint": "^3",
-    "eslint-config-google": "~0.8",
+    "coveralls": "^3",
+    "eslint": "^4",
+    "eslint-config-ebay": "~0.1",
     "jasmine-core": "^2",
     "jquery": ">=1.11",
     "jquery-focus-exit": "~0.3",
@@ -55,7 +55,7 @@
     "karma-phantomjs-launcher": "^1",
     "lasso-cli": "^2",
     "onchange": "^3",
-    "parallelshell": "^2",
+    "parallelshell": "^3",
     "phantomjs-prebuilt": "^2",
     "pre-commit": "^1",
     "rimraf": "^2"

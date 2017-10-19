@@ -6,7 +6,7 @@
 * @requires jquery-focusable
 * @requires jquery-focus-exit
 */
-(function($, window, document, undefined) {
+(function($, window, document, undefined) { // eslint-disable-line no-unused-vars
     /**
     * jQuery plugin that creates the basic interactivity for a flyout that opens on click of trigger element
     *
@@ -78,7 +78,7 @@
             var doFocusManagement = getFocusManagementBehaviour();
 
             // set state to expanded
-            var expandFlyout = function(e) {
+            var expandFlyout = function() {
                 if (isExpanded() === false) {
                     $trigger.attr('aria-expanded', 'true');
                     $widget.trigger('flyoutExpand');
@@ -87,7 +87,7 @@
             };
 
             // set state to collapsed
-            var collapseFlyout = function(e) {
+            var collapseFlyout = function() {
                 if (isExpanded() === true) {
                     $trigger.attr('aria-expanded', 'false');
                     $widget.trigger('flyoutCollapse');
@@ -95,12 +95,16 @@
             };
 
             // toggle visibility of overlay element
-            var toggleFlyout = function(e) {
-                var _void = isExpanded() ? collapseFlyout() : expandFlyout();
+            var toggleFlyout = function() {
+                if (isExpanded() === true) {
+                    collapseFlyout();
+                } else {
+                    expandFlyout();
+                }
             };
 
             // handler for click event on trigger
-            var onTriggerClick = function(e) {
+            var onTriggerClick = function() {
                 toggleFlyout();
             };
 

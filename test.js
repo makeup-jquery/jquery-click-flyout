@@ -1,5 +1,6 @@
-describe("jquery.clickflyout.js", function() {
+/* eslint-disable no-undef */
 
+describe("jquery.clickflyout.js", function() {
     jasmine.DEFAULT_TIMEOUT_INTERVAL = 500;
 
     var dummyEventTimeoutInterval = jasmine.DEFAULT_TIMEOUT_INTERVAL / 2;
@@ -18,8 +19,8 @@ describe("jquery.clickflyout.js", function() {
     var $widget, $button, $overlay;
 
     var dummyEventHandlers = {
-        onButtonFocus : function(e) {},
-        onflyoutCollapse : function(e) {}
+        onButtonFocus: function() {},
+        onflyoutCollapse: function() {}
     };
 
     beforeEach(function() {
@@ -37,7 +38,7 @@ describe("jquery.clickflyout.js", function() {
 
     it("should ensure id on overlay", function() {
         $widget.clickFlyout();
-        expect($overlay.prop('id')).not.toBe(undefined);;
+        expect($overlay.prop('id')).not.toBe(undefined);
     });
 
     it("should add aria-controls property to button", function() {
@@ -76,9 +77,9 @@ describe("jquery.clickflyout.js", function() {
         }, dummyEventTimeoutInterval);
     });
 
-    it("should set focus on first focusable overlay element (close button) when clicked if options.focusManagement='first'", function(done) {
+    it("should set focus on first focusable overlay element when clicked if focusManagement='first'", function(done) {
         $closeButton.on('focus', done);
-        $widget.clickFlyout({focusManagement: 'first'});
+        $widget.clickFlyout({ focusManagement: 'first' });
         $button.click();
     });
 
@@ -104,5 +105,4 @@ describe("jquery.clickflyout.js", function() {
         $widget.on('flyoutCollapse', done);
         $button.click().click();
     });
-
 });
